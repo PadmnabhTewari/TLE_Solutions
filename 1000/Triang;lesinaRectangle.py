@@ -1,0 +1,13 @@
+for _ in range(int(input())):
+    a,b=map(int,input().split())
+    l_x_0=list(map(int,input().split()))
+    l_x_h=list(map(int,input().split()))
+    l_0_y=list(map(int,input().split()))
+    l_w_y=list(map(int,input().split()))
+    l_x_0.remove(l_x_0[0])
+    l_x_h.remove(l_x_h[0])
+    l_0_y.remove(l_0_y[0])
+    l_w_y.remove(l_w_y[0])
+    a_max=max(max(l_x_0)-min(l_x_0),max(l_x_h)-min(l_x_h))
+    b_max=max(max(l_0_y)-min(l_0_y),max(l_w_y)-min(l_w_y))
+    print(max(a_max*b,b_max*a))
